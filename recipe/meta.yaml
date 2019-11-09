@@ -1,6 +1,6 @@
 {% set name = "kombine" %}
-{% set version = "0.8.3" %}
-{% set sha256 = "da7a9542600c81df4b2ede2772b730dacef61ea3bc19b495f4fa445ff2b92f75" %}
+{% set version = "0.8.4" %}
+{% set sha256 = "4fc1f55e106ed93058b7241aae254f3db5fd907a7cdf7a01e4b0a1968cafd382" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
